@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Correct Answers | Career Match Challenge</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+      :root { --ink:#17233d; --muted:#64708a; --blue:#3f77e8; --line:#dbe2ef; --shadow:0 20px 45px rgba(42,62,104,.12); }
+      * { box-sizing:border-box; }
+      body { margin:0; min-width:320px; color:var(--ink); font-family:"DM Sans",system-ui,sans-serif; background:radial-gradient(circle at 12% 8%,rgba(255,216,102,.38),transparent 22rem),radial-gradient(circle at 90% 18%,rgba(157,211,255,.28),transparent 26rem),#f5f8ff; }
+      .page { width:min(1120px,calc(100% - 32px)); margin:0 auto; padding:38px 0 58px; }
+      .topbar { display:flex; align-items:flex-start; justify-content:space-between; gap:24px; margin-bottom:28px; }.eyebrow { display:inline-flex; gap:7px; margin:0 0 9px; color:#6a5619; font-size:.79rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase; }.eyebrow::before { content:"✦"; color:#e09d16; }h1 { margin:0; font-size:clamp(2rem,5vw,3.35rem); letter-spacing:-.055em; line-height:1.1; }h1 span { color:var(--blue); }.intro { margin:10px 0 0; color:var(--muted); line-height:1.6; }
+      .back-button { flex:none; margin-top:10px; padding:12px 17px; border:1px solid var(--blue); border-radius:12px; background:var(--blue); color:#fff; font-weight:700; text-decoration:none; transition:transform .18s ease,background .18s ease; }.back-button:hover { transform:translateY(-2px); background:#285fd0; }
+      .answers { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; padding:clamp(18px,3vw,32px); border:1px solid rgba(219,226,239,.85); border-radius:24px; background:rgba(255,255,255,.82); box-shadow:var(--shadow); }
+      .answer-card { overflow:hidden; border:1px solid var(--line); border-radius:18px; background:#fff; }.comparison { display:grid; grid-template-columns:1fr 1fr; height:230px; }.half { position:relative; min-width:0; overflow:hidden; }.half + .half { border-left:2px solid #fff; }.half img { display:block; width:100%; height:230px; object-fit:cover; }.answer-card[data-person="xu"] .half:first-child img { object-position:50% 31%; }.answer-card[data-person="annie"] .half:first-child img { object-position:50% 44%; }.image-label { position:absolute; right:6px; bottom:6px; left:6px; padding:4px 5px; border-radius:5px; background:rgba(23,35,61,.72); color:#fff; font-size:.66rem; font-weight:700; text-align:center; }.answer-copy { padding:16px 17px 18px; }.person { margin:0 0 8px; color:var(--muted); font-size:.9rem; font-weight:700; }.career { display:flex; flex-wrap:wrap; align-items:baseline; gap:7px; margin:0; color:#3f2e07; font-size:1.25rem; font-weight:800; line-height:1.25; }.career::before { content:"Career:"; color:#8a6b15; font-size:.82rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; }.career .cn { color:#886f28; font-size:.85rem; font-weight:700; }
+      @media (max-width:760px) { .page { width:min(100% - 20px,1120px); padding-top:22px; }.topbar { flex-direction:column; gap:4px; }.back-button { margin-top:0; }.answers { grid-template-columns:repeat(2,minmax(0,1fr)); }.comparison,.half img { height:195px; } }
+      @media (max-width:430px) { .answers { grid-template-columns:1fr; padding:14px; }.comparison,.half img { height:245px; } }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <div><p class="eyebrow">Career Match Challenge</p><h1>Correct <span>Answers</span></h1><p class="intro">Here are the correct career matches for all six people.</p></div>
+        <a class="back-button" href="index.html">← Back to Challenge</a>
+      </header>
+      <section class="answers" aria-label="Correct career matches">
+        <article class="answer-card" data-person="andrew"><div class="comparison"><div class="half"><img src="assets/Andrew.png" alt="Andrew portrait"><span class="image-label">Portrait</span></div><div class="half"><img src="assets/andrew-nurse.png" alt="Andrew as a nurse"><span class="image-label">At work</span></div></div><div class="answer-copy"><p class="person">Andrew</p><p class="career">Nurse <span class="cn">护士</span></p></div></article>
+        <article class="answer-card" data-person="carlos"><div class="comparison"><div class="half"><img src="assets/Carlos.jpg" alt="Carlos portrait"><span class="image-label">Portrait</span></div><div class="half"><img src="assets/carlos-ballet.jpg" alt="Carlos as a ballet dancer"><span class="image-label">At work</span></div></div><div class="answer-copy"><p class="person">Carlos</p><p class="career">Ballet dancer <span class="cn">芭蕾舞演员</span></p></div></article>
+        <article class="answer-card" data-person="ozaki"><div class="comparison"><div class="half"><img src="assets/ozaki.png" alt="Ozaki portrait"><span class="image-label">Portrait</span></div><div class="half"><img src="assets/ozaki-wrestler.jpg" alt="Ozaki as a wrestler"><span class="image-label">At work</span></div></div><div class="answer-copy"><p class="person">Ozaki</p><p class="career">Wrestler <span class="cn">摔跤运动员</span></p></div></article>
+        <article class="answer-card" data-person="patrice"><div class="comparison"><div class="half"><img src="assets/Patrice.jpg" alt="Patrice portrait"><span class="image-label">Portrait</span></div><div class="half"><img src="assets/patrice-mechanic.jpg" alt="Patrice as an automobile mechanic"><span class="image-label">At work</span></div></div><div class="answer-copy"><p class="person">Patrice</p><p class="career">Automobile mechanic <span class="cn">汽车维修工</span></p></div></article>
+        <article class="answer-card" data-person="annie"><div class="comparison"><div class="half"><img src="assets/安妮.jpg" alt="Annie portrait"><span class="image-label">Portrait</span></div><div class="half"><img src="assets/annie-chef.jpeg" alt="Annie as a chef"><span class="image-label">At work</span></div></div><div class="answer-copy"><p class="person">Annie</p><p class="career">Chef <span class="cn">厨师</span></p></div></article>
+        <article class="answer-card" data-person="xu"><div class="comparison"><div class="half"><img src="assets/徐枫灿.jpeg" alt="Xu Fengcan portrait"><span class="image-label">Portrait</span></div><div class="half"><img src="assets/xu-pilot.jpeg" alt="Xu Fengcan as a fighter pilot"><span class="image-label">At work</span></div></div><div class="answer-copy"><p class="person">Xu Fengcan</p><p class="career">Fighter pilot <span class="cn">战斗机飞行员</span></p></div></article>
+      </section>
+    </main>
+  </body>
+</html>
